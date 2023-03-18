@@ -2,3 +2,239 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+html {
+	@apply scroll-smooth bg-slc-dark transition-all duration-100;
+}
+
+q {
+	@apply italic;
+}
+
+img {
+	@apply select-none;
+}
+
+button {
+	@apply rounded px-4 py-2 text-lg font-bold tracking-wider outline-dashed outline-1 outline-offset-1 outline-slc-light/50 transition-all hover:contrast-125 active:contrast-75 lg:px-6 lg:py-2;
+}
+
+.btn-blue {
+	@apply relative bg-slc-blue text-slc-light;
+}
+
+.btn-light {
+	@apply bg-slc-light text-slc-dark;
+}
+
+.btn-dark {
+	@apply relative bg-slc-dark text-slc-light;
+}
+
+header {
+	@apply inset-0 h-fit text-slc-light;
+}
+
+/* Nav */
+
+header nav {
+	@apply absolute inset-0 z-10 flex h-24 w-full items-start justify-between border-none bg-gradient-to-b from-slc-dark/40 to-transparent p-6 align-top text-sm transition-all lg:mx-auto lg:h-28 lg:px-16;
+}
+
+.scroll-nav {
+	@apply fixed top-0 left-0 flex h-max items-center border-b border-solid border-slc-light/20 bg-slc-dark/50 bg-gradient-to-b from-transparent via-transparent to-transparent p-4 align-middle shadow-md backdrop-blur-md;
+}
+
+.banner {
+	@apply relative -my-8 h-20 w-10 -translate-y-0.5 select-none outline-dashed outline-1 -outline-offset-2 outline-slc-light/50 transition-all hover:translate-y-0.5;
+}
+
+header a {
+	@apply flex items-center gap-2 align-middle;
+}
+
+header a img {
+	@apply h-6;
+}
+
+header nav ul {
+	@apply hidden gap-9 lg:flex lg:text-center;
+}
+
+header nav ul li {
+	@apply w-[5.5rem] underline-offset-2 hover:underline;
+}
+
+header nav ul li a {
+	@apply flex select-none items-center gap-2 text-left transition-all duration-75 hover:contrast-125 active:contrast-75;
+}
+
+.current-page {
+	@apply relative font-semibold text-slc-light hover:no-underline;
+}
+
+.current-page ::before {
+	content: '\27A4';
+}
+
+.page ::before {
+	content: '\27A4';
+	opacity: 0;
+}
+
+header nav div {
+	@apply hidden gap-4 lg:flex;
+}
+
+header nav div a {
+	@apply relative flex h-8 w-8 items-center justify-center rounded-full border border-dashed border-slc-light/50 bg-slc-dark/10 text-slc-light transition-all duration-75 hover:contrast-200 active:contrast-50;
+}
+
+header nav button {
+	@apply flex w-max select-none justify-center p-2 text-xl lg:hidden lg:text-xl;
+}
+
+header aside {
+	@apply fixed inset-0 isolate z-10 overflow-y-auto bg-slc-dark/60 p-4 backdrop-blur-lg;
+}
+
+header aside hgroup {
+	@apply relative mb-6 flex justify-between p-2 align-middle text-slc-light;
+}
+
+header aside hgroup button {
+	@apply relative px-2.5 py-1 text-slc-light;
+}
+
+header aside ul {
+	@apply flex flex-col gap-4;
+}
+
+header aside ul li {
+	@apply w-full;
+}
+
+header aside hr {
+	@apply my-4 rounded-full border-slc-light/75;
+}
+
+header aside ul li a {
+	@apply relative z-10 w-full select-none rounded bg-slc-light/10 p-3 text-lg shadow-md hover:bg-slc-light/20 hover:text-slc-light active:bg-slc-light/30 active:text-slc-light;
+}
+
+/* Hero */
+
+.hero {
+	@apply relative isolate z-0 h-full bg-cover bg-center  outline-dashed outline-2 outline-offset-1 outline-slc-dark/50;
+}
+
+.hero div {
+	@apply flex h-full w-full flex-col items-center justify-center bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-slc-dark/60 to-transparent;
+}
+
+.hero-full {
+	@apply h-[80vh] lg:h-[100vh];
+}
+
+.hero-partial {
+	@apply h-[40vh] lg:h-[50vh];
+}
+
+.glow-text {
+	text-shadow: 0 0 15px #0004;
+}
+
+.hero div hgroup {
+	@apply glow-text relative isolate z-20 mt-12 w-4/6 text-center text-slc-light drop-shadow-lg lg:text-left;
+}
+
+.hero div hgroup h1 {
+	@apply mb-2 text-4xl font-bold lg:mb-1 lg:text-6xl;
+}
+
+.hero div hgroup h2 {
+	@apply relative w-full text-xl text-slc-light lg:w-10/12 lg:font-medium;
+}
+
+.scroll-pls {
+	@apply absolute left-1/2 top-[85vh] hidden w-fit animate-bounce text-slc-light outline-none lg:flex;
+}
+
+/* Footer */
+
+footer {
+	@apply relative bottom-0 z-0 flex flex-col gap-4 bg-slc-blue text-slc-light outline-dashed outline-2 outline-offset-1 outline-slc-dark/50;
+}
+
+footer div {
+	@apply container mx-auto flex flex-col gap-y-4 p-8 text-center text-lg md:flex-row lg:text-left lg:text-base;
+}
+
+footer div section div {
+	@apply flex flex-col p-0 lg:flex-row;
+}
+
+footer div section {
+	@apply mx-auto flex w-5/6 flex-1 flex-col bg-inherit text-left last:gap-y-4;
+}
+
+footer section div h1 {
+	@apply text-3xl font-bold;
+}
+
+footer section small {
+	@apply text-base;
+}
+
+footer span {
+	@apply relative left-0 mt-0 flex flex-col items-center gap-y-1 bg-slc-dark px-20 pb-6 pt-4 text-center text-xs lg:flex-row lg:justify-between lg:text-right;
+}
+
+footer span small {
+	@apply flex text-center align-middle first:flex-1 first:gap-2 first:text-sm lg:text-left first:lg:text-xs;
+}
+
+footer section h1 {
+	@apply mb-2 text-2xl font-bold lg:text-xl;
+}
+
+footer section h2 {
+	@apply text-xl font-bold;
+}
+
+footer section section {
+	@apply block;
+}
+
+footer section nav ul {
+	@apply ml-4 flex h-max list-disc flex-col;
+}
+
+footer section nav ul li i {
+	@apply w-5 text-center;
+}
+
+footer section a {
+	@apply underline-offset-2 hover:underline;
+}
+
+.footer-links {
+	@apply flex w-full flex-col gap-y-4 lg:flex-row;
+}
+
+/* News page */
+section {
+	@apply bg-slc-light;
+}
+
+#articles-container {
+	@apply container mx-auto grid grid-cols-1 gap-6 py-12 px-8 md:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4;
+}
+
+#articles-container article {
+	@apply flex h-[20rem] flex-1 flex-col overflow-clip text-ellipsis rounded bg-slc-dark text-slc-light outline-dashed outline-2 outline-offset-1 outline-slc-dark/50 drop-shadow-md;
+}
+
+#article-cover-image {
+	@apply h-60 w-full bg-cover bg-center;
+}
